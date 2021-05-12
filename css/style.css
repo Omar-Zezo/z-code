@@ -1,0 +1,1115 @@
+/* Start Global Styles */
+body{
+    font-family: 'Open Sans', sans-serif;
+    height: 3000px;
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 85%;
+    margin: auto;
+}
+.line{
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: var(--mainColor);
+    margin: auto;
+}
+.section-title{
+    font-weight: bold;
+    font-size: 40px;
+    text-transform: capitalize;
+    color: var(--mainColor);
+    text-align: center;
+}
+:root{
+    --mainColor: #2e7e6d;
+}
+
+/* scroll to top */
+.scroll{
+    display: block;
+    position: fixed;
+    z-index: 10;
+    bottom: 10px;
+    right: 10px;
+    border: 2px solid #EEE;
+    border-radius: 50%;
+    background-color: #FFF;
+    display: none;
+    transition: all 1s;
+}
+.scroll i{
+    color: var(--mainColor);
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 35px;
+    cursor: pointer;
+}
+/* start dark mode */
+body.dark{
+    background-color: black;
+}
+
+body.dark p:not(#text), body.dark h4:not(footer h4){
+    color: #FFF !important;
+}
+body.dark .services > div{
+    background-color: #222;
+}
+body.dark .information form input:not([type="submit"]), body.dark .information .msg{
+    background-color: #222;
+    color: #666;
+}
+/* end dark mode */
+
+/* End Global Style */
+
+/* Start Settings Box */
+.settings-box{
+    min-height: 100vh;
+    width: 30%;
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    left: -30%;
+    z-index: 5;
+    transition: .5;
+}
+
+.gear-icon{
+    color: #FFF;
+    font-size: 20px;
+    position: absolute;
+    right: -40px;
+    top: 15%;
+    padding: 5px 10px;
+    background-color: var(--mainColor);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+.open{
+    left: 0;
+}
+
+.settings-box .color-box, .random-background, .dark-mode{
+    padding: 20px;
+    text-align: center;
+    background-color: #222;
+    margin-top: 20px;
+}
+
+.settings-box .color-box h4, .random-background h4, .dark-mode h4{
+    color: #FFF;
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.settings-box .color-box ul{
+    text-align: center;
+}
+
+.settings-box .color-box ul li{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.settings-box .color-box ul li:first-child{
+    background-color: #2e7e6d;
+}
+.settings-box .color-box ul li:nth-child(2){
+    background-color: #f0a500;
+}
+.settings-box .color-box ul li:nth-child(3){
+    background-color: #1463a3;
+}
+.settings-box .color-box ul li:nth-child(4){
+    background-color: #ce1212;
+}
+.settings-box .color-box ul li:nth-child(5){
+    background-color: #8b5e83;
+}
+.settings-box .color-box ul li.selected{
+    border: 2px solid #FFF;
+}
+
+.random-background .random-control span{
+    padding: 5px 20px;
+    background-color: #4caf50;
+    color: #FFF;
+    display: inline-block;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-right: 15px;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.random-background .random-control span:last-child{
+    background-color: #ce1212;
+}
+
+.random-background .random-control span.active{
+    opacity: 1;
+}
+
+.dark-mode span{
+    padding: 5px 20px;
+    background-color: #4caf50;
+    color: #FFF;
+    display: inline-block;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-right: 15px;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.dark-mode span:last-child{
+    background-color: #ce1212;
+}
+
+.dark-mode span.active{
+    opacity: 1;
+}
+/* end Settings Box */
+/* start social media */
+.social-media{
+    position: fixed;
+    z-index: 7;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.social-media i{
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 5px;
+}
+.social-media .facebook{
+    background-color: #4867AA;
+    padding: 10px 13px;
+}
+.social-media .twitter{
+    background-color: #29A4D9;
+}
+.social-media .linkedin{
+    background-color: #0A66C2;
+}
+.social-media .instgram{
+    background-color: #a866af;
+}
+/* end social media */
+
+/* Start Landing Page */
+.landing-page{
+    min-height: 100vh;
+    background-image: url("../imgs/3.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+.landing-page .overlay{
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+header{
+    position: relative;
+    z-index: 2;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+header .logo{
+    width: 20%;
+    font-size: 30px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.logo span{
+    display: inline-block;
+    color: var(--mainColor);
+    border: 3px solid var(--mainColor);
+    padding: 5px 15px;
+    margin-right: 3px;
+    font-size: 35px;
+}
+.logo span:last-child{
+    display: inline-block;
+    color: var(--mainColor);
+    font-size: 35px;
+    border: 0;
+    padding: 0;
+    padding-left: 5px;
+}
+
+header ul{
+    margin-left: auto;
+}
+
+header ul li{
+    display: inline-block;
+    padding: 20px;
+}
+
+header ul li a{
+    color: #FFF;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+    border-bottom: 2px solid transparent;
+    padding: 3px;
+    transition: .3s;
+}
+
+header ul li a:hover, header ul li a.active{
+    color: var(--mainColor);
+    border-color: var(--mainColor);
+}
+
+.info{
+    width: 70%;
+    text-align: center;
+    color: #FFF;
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.info h1{
+    font-size: 70px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.info h1 span{
+    color: var(--mainColor);
+}
+
+.info p{
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: 500;
+
+}
+/* End Landing Page */
+
+/* start about us  */
+.about-us{
+    display: flex;
+    align-items: center;
+    margin: 200px auto;
+}
+
+.about-us > div{
+    flex: 1;
+}
+
+.about-us .about-info p{
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    font-weight: 400;
+}
+
+.about-img{
+    position: relative;
+}
+
+.about-us .about-img img{
+    max-width: 100%;
+}
+
+.about-img .welcome-msg{
+    position: absolute;
+    top: 15%;
+    left: 47%;
+    color: #777 !important;
+    width: 185px;
+    font-weight: bolder;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.about-img .fa-power-off{
+    position: absolute;
+    top: 39%;
+    left: 80%;
+    cursor: pointer;
+    color: red;
+    font-size: 20px;
+    font-weight: bolder;
+    animation: power 1s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+
+@keyframes power {
+    
+    0% {opacity: 1; color: red;}
+    100% {opacity: .5; color: green;}
+}
+
+.welcome-msg h3{
+    color: var(--mainColor);
+    margin: 0;
+}
+
+.welcome-msg p{
+    margin: 0;
+}
+
+.about-img .cv {
+    position: absolute;
+    top: 36%;
+    left: 58%;
+    padding: 5px 20px;
+    color: var(--mainColor);
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid var(--mainColor);
+    border-radius: 5px;
+    letter-spacing: 1px;
+    display: none;
+}
+
+.about-img .cv span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--mainColor);
+    color: #FFF;
+    cursor: pointer;
+    text-align: center;
+    display: none;
+}
+
+.about-img .cv span i{
+    line-height: 30px;
+}
+
+.about-img .cv:hover span, .about-img .cv:active span{
+    display: block;
+}
+/* end about us  */
+
+/* start our skills */
+.our-skills{
+    display: flex;
+    align-items: center;
+    margin: 200px auto;
+}
+
+.our-skills .title{
+    flex: 1;
+    text-align: center;
+}
+
+.our-skills .skills{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+.skills .skill h4{
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #666;
+}
+
+.skills .skill .skill-progress{
+    height: 15px;
+    border-radius: 20px;
+    background-color: #EEE;
+    overflow: hidden;
+}
+
+.skill .skill-progress span{
+    height: 100%;
+    display: block;
+    background-color: var(--mainColor);
+    line-height: 15px;
+    color: #FFF;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    width: 0;
+    transition: all .5s;
+}
+/* end my skills */
+/* start my services */
+.my-services{
+    text-align: center;
+    margin: 200px auto;
+}
+
+.my-services .services{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.my-services .services > div{
+    width: calc(84% /3);
+    height: 300px;
+    flex-shrink: 0;
+    margin: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    border-left: 5px solid var(--mainColor);
+    background-color: #EEE;
+}
+.my-services .services > div i{
+    font-size: 40px;
+    color: var(--mainColor);
+}
+.my-services .services > div h4{
+    font-size: 20px;
+    text-transform: capitalize;
+    color: var(--mainColor);
+}
+/* end my services */
+/* start my portfolio  */
+.my-portfolio{
+    text-align: center;
+    margin: 200px auto;
+}
+
+.my-portfolio .portfolio{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.my-portfolio .portfolio > div{
+    width: calc(89% / 3);
+    background-color: #000;
+    height: 500px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    border: 3px solid var(--mainColor);
+    border-radius: 5px;
+}
+.my-portfolio .portfolio span{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.my-portfolio .portfolio img{
+    max-width: 100%;
+}
+.my-portfolio .portfolio span h4{
+    font-size: 30px;
+    color: var(--mainColor) !important;
+    text-transform: capitalize;
+}
+.my-portfolio .portfolio span a{
+    background-color: var(--mainColor);
+    color: #FFF;
+    padding: 10px 30px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* end my portfolio  */
+/* start contact us */
+.contact-us .contact{
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+}
+.contact-us .contact > div{
+    flex: 1;
+    text-align: center;
+}
+.contact-us .contact-img img{
+    max-width: 80%;
+}
+.contact .information form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.information form input, .information form textarea{
+    width: 70%;
+    height: 50px;
+    outline: none;
+    border: 0;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    padding: 0 30px;
+    font-size: 15px;
+    color: #555;
+    text-transform: capitalize;
+    background-color: rgb(204, 204, 204, .7);
+}
+.information form input[type="submit"]{
+    background-color: var(--mainColor);
+    color: #FFF;
+    cursor: pointer;
+    font-weight: bold;
+}
+.information form textarea{
+    height: 200px;
+    resize: none;
+    padding: 30px;
+}
+.information form input:focus, .information form textarea:focus{
+    border: 2px solid var(--mainColor);
+}
+/* end contact us */
+/* start footer */
+footer{
+    height: 50px;
+    background-color: #222;
+    color: #444;
+    line-height: 50px;
+    text-transform: capitalize;
+}
+footer span{
+    color: #777;
+}
+footer span:hover{
+    color: #999;
+}
+/* end footer */
+
+/* Media Query */
+/* Start Media for Mobail */
+@media screen and (max-width: 480px) {
+    .scroll{
+        right: 5px;
+        bottom: 5px;
+    }
+    .scroll i{
+        font-size: 25px;
+    }
+    .settings-box{
+        width: 70%;
+        left: -70%;
+    }
+    .settings-box.open{
+        left: 0;
+    }
+    .social-media{
+        position: absolute;
+    }
+    .social-media i{
+        font-size: 15px;
+        margin-bottom: 20px;
+        color: #FFF;
+        padding: 8px;
+        border-radius: 5px;
+    }
+    .social-media .facebook{
+        padding: 8px 10px;
+    }
+    .section-title {
+        font-size: 30px !important;
+    }
+    header{
+        padding-top: 10px;
+        width: 100% !important;
+    }
+    header .logo{
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+        margin-left: 5px;
+    }
+    header .logo span{
+        font-size: 25px;
+        padding: 5px 10px;
+    }
+    header .logo span:last-child{
+        font-size: 25px;
+    }
+    header ul {
+        display: none;
+    }
+    .info{
+        top: 60%;
+    }
+    .info h1{
+        font-size: 50px;
+    }
+    .about-us{
+        flex-direction: column;
+        margin: 100px auto !important;
+
+    }
+    .about-info{
+        margin: 30px 0;
+    }
+    
+    .about-us .about-info p{
+        text-align: center;
+        font-size: 17px;
+        width: 90%;
+        margin: 20px auto !important;
+    }
+    .about-img .fa-power-off{
+        font-size: 18px;
+        top: 36%;
+        left: 78%;
+    }
+    .about-img .welcome-msg {
+        top: 11%;
+        left: 45%;
+        width: 125px;
+        font-size: 10px;
+    }
+    .about-img .cv {
+        top: 34%;
+        left: 58%;
+        padding: 0px 10px;
+        font-size: 14px;
+    }
+    .our-skills{
+        flex-direction: column;
+    }
+    .our-skills .skills{
+        width: 90%;
+        margin: 0;
+    }
+    .skills .skill-progress{
+        height: 10px !important;
+    }
+    .skills .skill-progress span{
+        line-height: 10px;
+        font-size: 10px;
+    }
+    .my-services .services div{
+        width: 90%;
+        margin: 20px auto;
+    }
+    .my-portfolio .portfolio{
+        flex-direction: column;
+    }
+    .my-portfolio .portfolio > div{
+        width: 90%;
+        height: 400px;
+        margin: 20px auto;
+    }
+    .contact-us .contact{
+        flex-direction: column !important;
+    }
+    .contact-us .contact > div{
+        width: 100%;
+    }
+    .contact .information form input{
+        width: 90%;
+        height: 40px;
+    }
+    .contact .information form textarea{
+        width: 90%;
+        height: 200px;
+    }
+    footer h4{
+        font-size: 15px;
+    }
+}
+/* end Media for Mobail */
+
+/* Start Media for tablet */
+@media screen and (min-width: 480px) and (max-width : 768px) {
+    .scroll{
+        right: 10px;
+        bottom: 10px;
+    }
+    .scroll i{
+        font-size: 35px;
+    }
+    .settings-box{
+        width: 70%;
+        left: -70%;
+    }
+    .settings-box.open{
+        left: 0;
+    }
+    .gear-icon{
+        font-size: 25px !important;
+        right: -45px !important;
+    }
+    .social-media{
+        position: absolute;
+    }
+    .social-media i{
+        margin-bottom: 20px;
+        color: #FFF;
+        padding: 8px;
+        border-radius: 5px;
+    }
+    .social-media .facebook{
+        padding: 8px 10px;
+    }
+    .section-title {
+        font-size: 40px !important;
+    }
+    header{
+        padding-top: 10px;
+        width: 100% !important;
+    }
+    header .logo{
+        font-size: 50px;
+        width: 100%;
+        text-align: center;
+        margin: auto;
+    }
+    header .logo span{
+        font-size: 55px;
+        padding: 5px 10px;
+    }
+    header .logo span:last-child{
+        font-size: 55px;
+    }
+    header ul {
+        display: none;
+    }
+    .info{
+        top: 50%;
+        width: 82%;
+    }
+    .info h1{
+        font-size: 65px;
+    }
+    .info p{
+        font-size: 25px;
+    }
+    .about-us{
+        flex-direction: column;
+        margin: 100px auto !important;
+
+    }
+    .about-info{
+        margin: 30px 0;
+    }
+    
+    .about-us .about-info p{
+        text-align: center;
+        font-size: 25px;
+        width: 100%;
+        margin: 20px auto !important;
+    }
+    .about-img .fa-power-off{
+        font-size: 25px;
+        top: 39%;
+        left: 80%;
+    }
+    .about-img .welcome-msg {
+        top: 11%;
+        left: 45%;
+        width: 207px;
+        font-size: 19px;
+    }
+    .about-img .cv {
+        top: 34%;
+        left: 58%;
+        padding: 5px 30px;
+        font-size: 20px;
+    }
+    .our-skills{
+        flex-direction: column;
+    }
+    .our-skills .skills{
+        width: 90%;
+        margin: 0;
+    }
+    .skills .skill-progress{
+        height: 10px !important;
+    }
+    .skills .skill-progress span{
+        line-height: 10px;
+        font-size: 10px;
+    }
+    .my-services .services{
+        justify-content: space-between;
+    }
+    .my-services .services div{
+        width: 48%;
+        margin: 20px auto;
+    }
+    .my-portfolio .portfolio{
+        flex-direction: column;
+    }
+    .my-portfolio .portfolio > div{
+        width: 95% !important;
+        height: 500px;
+        margin: 20px auto;
+    }
+    .contact-us .contact{
+        flex-direction: column !important;
+    }
+    .contact-us .contact > div{
+        width: 100%;
+    }
+    .contact .information form input{
+        width: 90%;
+        height: 40px;
+    }
+    .contact .information form textarea{
+        width: 90%;
+        height: 200px;
+    }
+    footer h4{
+        font-size: 15px;
+    }
+}
+/* end Media for tablet */
+/* start media min 768px : 1024px */
+@media screen and (min-width: 768px) and (max-width : 1024px){
+    .scroll{
+        right: 10px;
+        bottom: 10px;
+    }
+    .scroll i{
+        font-size: 45px;
+    }
+    .settings-box{
+        width: 70%;
+        left: -70%;
+    }
+    .settings-box.open{
+        left: 0;
+    }
+    .gear-icon{
+        font-size: 45px;
+        right: -65px;
+    }
+    .section-title {
+        font-size: 50px;
+    }
+    header{
+        padding-top: 10px;
+        width: 100% !important;
+    }
+    header .logo{
+        font-size: 50px;
+        width: 30%;
+        text-align: center;
+        margin: auto;
+    }
+    header .logo span{
+        font-size: 55px;
+        padding: 5px 10px;
+    }
+    header .logo span:last-child{
+        font-size: 55px;
+    }
+    header ul li a{
+        font-size: 25px;
+    }
+    .info{
+        top: 50%;
+        width: 82%;
+    }
+    .info h1{
+        font-size: 75px;
+    }
+    .info p{
+        font-size: 30px;
+    }
+    .about-us{
+        flex-direction: column;
+    }
+    .about-info{
+        margin-bottom: 20px;
+    }
+    .about-info p{
+        font-size: 30px !important;
+        text-align: center;
+    }
+    .about-img .fa-power-off{
+        font-size: 30px;
+        top: 39%;
+        left: 80%;
+    }
+    .about-img .welcome-msg {
+        top: 11%;
+        left: 45%;
+        width: 243px;
+        font-size: 22px;
+    }
+    .about-img .cv {
+        top: 34%;
+        left: 58%;
+        padding: 5px 30px;
+        font-size: 25px;
+    }
+    .our-skills{
+        flex-direction: column;
+    }
+    .our-skills .skills{
+        width: 90%;
+        margin: 0;
+    }
+    .our-skills .skills h4{
+        font-size: 25px;
+    }
+    .skills .skill-progress{
+        height: 15px !important;
+    }
+    .skills .skill-progress span{
+        line-height: 15px;
+        font-size: 10px;
+    }
+    .my-services .services > div {
+        width: calc(84% /2);
+    }
+    .my-portfolio .portfolio > div{
+        width: 48%;
+        height: 500px;
+        margin: 20px auto;
+    }
+    .contact-us .contact{
+        flex-direction: column !important;
+    }
+    .contact-us .contact > div{
+        width: 100%;
+    }
+    .contact .information form input{
+        width: 90%;
+        height: 70px;
+        font-size: 25px;
+    }
+    .contact .information form textarea{
+        width: 90%;
+        height: 250px;
+        font-size: 25px;
+    }
+    footer h4{
+        font-size: 25px;
+    } 
+}
+/* start media min 768px : 1200px */
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: #151515;
+    transition: all .5s;
+  }
+
+  .disapper{
+    display: none;
+}
+
+  #preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 0px);
+    left: calc(50% - 30px);
+    border: 6px solid var(--mainColor);
+    border-top-color: #151515;
+    border-bottom-color: #151515;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: animate-preloader 1s linear infinite;
+    animation: animate-preloader 1s linear infinite;
+  }
+  
+  @-webkit-keyframes animate-preloader {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes animate-preloader {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /*--------------------------------------------------------------
+  # Disable aos animation delay on mobile devices
+  --------------------------------------------------------------*/
+   @media screen and (max-width: 768px) {
+    [data-aos-delay] {
+      transition-delay: 0 !important;
+    }
+  } 
+
