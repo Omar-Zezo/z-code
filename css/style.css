@@ -320,6 +320,7 @@ header ul li a:hover, header ul li a.active{
     font-weight: bold;
     text-transform: capitalize;
     letter-spacing: 5px;
+    text-align: center;
 }
 
 .info h1 span{
