@@ -319,10 +319,12 @@ header ul li a:hover, header ul li a.active{
     font-size: 70px;
     font-weight: bold;
     text-transform: capitalize;
+    letter-spacing: 5px;
 }
 
 .info h1 span{
     color: var(--mainColor);
+    letter-spacing: 5px;
 }
 
 .info p{
